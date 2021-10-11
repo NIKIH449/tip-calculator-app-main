@@ -81,6 +81,7 @@ function checkBill() {
     tipTotal.textContent = '₪0.00'
     tipAmount.textContent = '₪0.00'
   }
+  
 }
 buttonFive.addEventListener('click', tipFivePercent)
 buttonTen.addEventListener('click', tipTenPercent)

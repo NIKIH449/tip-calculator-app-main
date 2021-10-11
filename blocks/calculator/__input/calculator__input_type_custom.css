@@ -12,5 +12,6 @@
 @media screen and (max-width: 890px) {
   .calculator__input_type_custom {
     width: 135px;
+    text-align: center;
   }
 }
