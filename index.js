@@ -16,46 +16,46 @@ function disableButton() {
   resetButton.removeAttribute('disabled')
 }
 function tipFivePercent() {
-  tipTotal.textContent = '₪'+ (billInput.value/100*5).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*5).toFixed(2)
+  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*5).toFixed(2)
+  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*5).toFixed(2)
   disableButton()
 }
 
 function tipTenPercent() {
-  tipTotal.textContent = '₪'+ (billInput.value/100*10).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*10).toFixed(2)
+  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*10).toFixed(2)
+  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*10).toFixed(2)
   disableButton()
 }
 
 function tipFifthteenPercent() {
-  tipTotal.textContent = '₪'+ (billInput.value/100*15).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*15).toFixed(2)
+  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*15).toFixed(2)
+  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*15).toFixed(2)
   disableButton()
 }
 
 function tipTwentyfivePercent() {
-  tipTotal.textContent = '₪'+ (billInput.value/100*25).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*25).toFixed(2)
+  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*25).toFixed(2)
+  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*25).toFixed(2)
   disableButton()
 }
 
 function tipFifthtyPercent() {
-  tipTotal.textContent = '₪'+ (billInput.value/100*50).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*50).toFixed(2)
+  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*50).toFixed(2)
+  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*50).toFixed(2)
   disableButton()
 }
 
 function tipCustomPercent() {
   if (inputCustom.value >= 0) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*inputCustom.value).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*inputCustom.value).toFixed(2)
+  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*inputCustom.value).toFixed(2)
+  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*inputCustom.value).toFixed(2)
   disableButton()
   }
 }
 
 function resetTips() {
-  tipTotal.textContent = '$0.00'
-  tipAmount.textContent = '$0.00'
+  tipTotal.textContent = '₪0.00'
+  tipAmount.textContent = '₪0.00'
   billInput.value = 0
   peopleInput.value = 1
   resetButton.setAttribute('disabled', true)
@@ -66,16 +66,22 @@ function resetInput() {
 }
 
 function checkPeople() {
-  if (peopleInput.value == 0) {
+  if ((peopleInput.value <= 0)) {
     document.querySelector('.calculator__input-error').classList.add('calculator__input-error_active')
-    tipTotal.textContent = '$0.00'
-    tipAmount.textContent = '$0.00'
+    tipTotal.textContent = '₪0.00'
+    tipAmount.textContent = '₪0.00'
   } else {
     document.querySelector('.calculator__input-error').classList.remove('calculator__input-error_active')
     tipCustomPercent()
   }
 }
 
+function checkBill() {
+  if (billInput.value <= 0) {
+    tipTotal.textContent = '₪0.00'
+    tipAmount.textContent = '₪0.00'
+  }
+}
 buttonFive.addEventListener('click', tipFivePercent)
 buttonTen.addEventListener('click', tipTenPercent)
 buttonFifthteen.addEventListener('click', tipFifthteenPercent)
@@ -83,6 +89,8 @@ buttonTwentyfive.addEventListener('click', tipTwentyfivePercent)
 buttonFifthty.addEventListener('click', tipFifthtyPercent)
 resetButton.addEventListener('click', resetTips)
 billInput.addEventListener('input', tipCustomPercent)
+billInput.addEventListener('input', checkBill)
 peopleInput.addEventListener('input', checkPeople)
 inputCustom.addEventListener('click', resetInput)
 inputCustom.addEventListener('input', tipCustomPercent)
+
