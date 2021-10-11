@@ -4,3 +4,9 @@
   font-size: 40px;
   margin: 0;
 }
+
+@media screen and (max-width: 890px) {
+  .calculator__calculated-sum {
+    font-size: 35px;
+  }
+}

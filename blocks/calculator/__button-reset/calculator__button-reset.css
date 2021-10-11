@@ -12,3 +12,9 @@
   background-color: #488188;
   border: 2px solid #5da7a6;
 }
+
+@media screen and (max-width: 890px) {
+  .calculator__button-reset {
+    width: 90%;
+  }
+}

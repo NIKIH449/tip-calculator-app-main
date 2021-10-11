@@ -5,3 +5,9 @@
   padding: 0;
   width: 200px;
 }
+
+@media screen and (max-width: 890px) {
+  .calculator__title {
+    margin: 25px 0 10px;
+  }
+}

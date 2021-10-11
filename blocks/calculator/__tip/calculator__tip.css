@@ -6,6 +6,7 @@
   font-size: 20px;
   border-radius: 5px;
   border: 2px solid #bad6db;
+  height: 50px;
 }
 .calculator__tip:hover {
   background-color: #9de8e1;
