@@ -1,0 +1,11 @@
+.header__title {
+  font-family: SpaceMonoBold;
+  font-size: 24px;
+  line-height: 30px;
+  width: 100px;
+  letter-spacing: 10px;
+  word-wrap: break-word;
+  color: #5a797e;
+  padding: 0;
+  margin: 145px auto 80px;
+}

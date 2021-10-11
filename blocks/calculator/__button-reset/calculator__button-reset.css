@@ -1,0 +1,18 @@
+.calculator__button-reset {
+  margin: 0 auto;
+  height: 45px;
+  width: 80%;
+  padding: 0;
+  font-family: SpaceMonoBold;
+  border-radius: 5px;
+  border: 2px solid #3fbeaf;
+}
+
+.calculator__button-reset:hover {
+  background-color: #9de8e1;
+}
+
+.calculator__button-reset:active {
+  background-color: #488188;
+  border: 2px solid #5da7a6;
+}

@@ -1,0 +1,25 @@
+.calculator__tip {
+  padding: 0;
+  background-color: #00484c;
+  color: #ffffff;
+  font-family: SpaceMonoBold;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #bad6db;
+}
+.calculator__tip:hover {
+  background-color: #9de8e1;
+  color: #00484c;
+}
+
+.calculator__tip:active {
+  background-color: #f3f8fb;
+  color: #00484c;
+  border-color: #69a49d;
+
+}
+
+.calculator__tip:last-child {
+  background-color: #ffffff;
+  color: #00484c;
+}

@@ -1,0 +1,9 @@
+.calculator__tips {
+  display: grid;
+  margin: 15px 0 20px;
+  width: 94%;
+  height: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+  padding: 0;
+}
