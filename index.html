@@ -5,13 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/styles.css">
+  <link rel="icon" sizes="32x32" href="./images/favicon-32x32.png" type="image/x-icon">
   <title>tip-calculator</title>
 </head>
 <body>
   <div class="page">
 
     <header calss="header">
-      <h1 class="header__title">SPLITTER</h1>
+      <h1 class="header__logo"></h1>
     </header>
 
     <main class="main">
@@ -22,6 +23,13 @@
             <input type="text" class="calculator__input calculator__input_type_bill" maxlength="4" name="bill"  placeholder="0">
           </div>
           <div class="calculator__field">
+            <div class="calculator__field-name">
+              <p class="calculator__title">Number of People</p>
+              <span  class="calculator__input-error">It can't be!</span>
+            </div>
+            <input type="text" class="calculator__input calculator__input_type_people" placeholder ="1" name="people" maxlength="4">
+          </div>
+          <div class="calculator__field">
             <p class="calculator__title">Select Tip %</p>
             <div class="calculator__tips">
               <button class="calculator__tip calculator__tip_type_five">5%</button>
@@ -29,15 +37,8 @@
               <button class="calculator__tip calculator__tip_type_fifthteen">15%</button>
               <button class="calculator__tip calculator__tip_type_twentyfive">25%</button>
               <button class="calculator__tip calculator__tip_type_fifthty">50%</button>
-              <button class="calculator__tip calculator__tip_type_custom"><input type="text" maxlength="3" placeholder="Custom" class="calculator__input calculator__input_type_custom"></button>
+              <input type="text" maxlength="3" placeholder="Custom" class="calculator__input calculator__input_type_custom">
             </div>
-          </div>
-          <div class="calculator__field">
-            <div class="calculator__field-name">
-              <p class="calculator__title">Number of People</p>
-              <span  class="calculator__input-error">It can't be!</span>
-            </div>
-            <input type="text" class="calculator__input calculator__input_type_people" placeholder ="1" name="people" maxlength="4">
           </div>
         </div>
         <div class="calculator__result">

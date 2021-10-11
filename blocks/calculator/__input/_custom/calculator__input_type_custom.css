@@ -1,7 +1,9 @@
 .calculator__input_type_custom {
   margin: 0;
-  width: 100px;
-  padding: 0;
+  width: 101px;
+  padding-right: 7px;
+  align-self: center;
+  height: 50px;
 }
 
 .calculator__input_type_custom:focus {

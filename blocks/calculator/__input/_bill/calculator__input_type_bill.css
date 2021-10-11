@@ -1,0 +1,6 @@
+.calculator__input_type_bill {
+  background-image: url(../../../../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: 5px;
+}
