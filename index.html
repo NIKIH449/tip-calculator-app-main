@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="./pages/styles.css">
+  <title>tip-calculator</title>
+</head>
+<body>
+  <main class="main">
+    <h1 class="title">SPLITTER</h1>
+    <div class="calculator">
+      <div class="calculator__options">
+        <div class="bill">
+          <p class="calculator__title">Bill</p>
+          <input type="text" class="calculator__input">
+        </div>
+        <div class="tips">
+          <p class="calculator__title">Select Tip %</p>
+          <div class="tips__options">
+            <button class="tips__option">5%</button>
+            <button class="tips__option">10%</button>
+            <button class="tips__option">15%</button>
+            <button class="tips__option">25%</button>
+            <button class="tips__option">50%</button>
+            <button class="tips__option">Custom</button>
+          </div>
+        </div>
+        <div class="peoples">
+          <p class="calculator__title">Number of People</p>
+          <input type="text" class="calculator__input">
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip__result">
+          <div class="tip-calculated">
+            <h2 class="tip-calculated__title">Tip amount<span class="tip-calculated__title_span">/person</span></h2>
+            <h2 class="tip__sum">$0.00</h2>
+          </div>
+          <div class="tip-calculated">
+            <h2 class="tip-calculated__title">Total<span class="tip-calculated__title_span">/person</span></h2>
+            <h2 class="tip__sum">$0.00</h2>
+          </div>
+        </div>
+        <button class="button__reset">RESET</button>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

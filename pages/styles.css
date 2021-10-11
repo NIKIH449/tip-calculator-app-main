@@ -1,0 +1,142 @@
+@font-face {
+  font-family: SpaceMonoRegular;
+  src: url(../vendor/fonts/SpaceMono-Regular.ttf);
+}
+@font-face {
+  font-family: SpaceMonoBold;
+  src: url(../vendor/fonts/SpaceMono-Bold.ttf);
+}
+@font-face {
+  font-family: SpaceMonoItalic;
+  src: url(../vendor/fonts/SpaceMono-Italic.ttf);
+}
+@font-face {
+  font-family: SpaceMonoBoldItalic;
+  src: url(../vendor/fonts/SpaceMono-BoldItalic.ttf);
+}
+
+.b {
+  border: 1px solid red
+}
+
+.main {
+  background-color:#c5e4e9;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+
+}
+
+.title {
+  font-family: SpaceMonoBold;
+  font-size: 24px;
+  line-height: 30px;
+  width: 100px;
+  letter-spacing: 10px;
+  word-wrap: break-word;
+  color: #5a797e;
+  padding: 0;
+  margin: 145px auto 80px;
+}
+
+.calculator {
+  min-width: 870px;
+  height: 450px;
+  display: flex;
+  box-sizing: border-box;
+  background-color:#ffffff;
+}
+
+.calculator__options {
+  margin: 30px 10px 20px 40px;
+  min-width: 380px;
+}
+
+
+
+.calculator__title {
+  font-family: SpaceMonoRegular;
+  color: #788583;
+  margin: 18px 0 10px;
+  padding: 0;
+}
+
+.calculator__input {
+  padding: 0;
+  margin: 0 0 15px;
+  width: 94%;
+  height: 40px;
+  background-color: #f4f7fc;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+}
+
+.tips__options {
+  display: grid;
+  margin: 15px 0 20px;
+  width: 94%;
+  height: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+}
+.tips__option {
+  background-color: #00484c;
+  color: #ffffff;
+  font-family: SpaceMonoBold;
+  font-size: 20px;
+}
+
+.tips__option:last-child {
+  background-color: #ffffff;
+  color: #00484c;
+}
+
+.tip {
+  background: #00484c;
+  margin: 30px 40px 30px 10px;
+  width: 100%;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tip__result {
+  margin: 0 5px 0 5px;
+
+}
+.tip-calculated {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 35px 20px 35px;
+}
+.tip-calculated__title {
+  margin: 0;
+  padding: 0;
+  font-family: SpaceMonoRegular;
+  font-size: 10px;
+  color: white;
+  word-wrap: break-word;
+  width:90px;
+}
+
+.tip-calculated__title_span {
+  color: #488188
+}
+.tip__sum {
+  color: black;
+  font-family: SpaceMonoBold;
+  font-size: 45px;
+  margin: 0;
+}
+
+.button__reset {
+  margin: 0 auto 35px;
+  height: 45px;
+  width: 80%;
+}
