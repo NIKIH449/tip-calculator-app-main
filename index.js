@@ -68,7 +68,19 @@ function resetTips() {
   tipAmount.textContent = '₪0.00'
   billInput.value = ''
   peopleInput.value = ''
+  inputCustom.value = ''
   resetButton.setAttribute('disabled', true)
+}
+
+
+function checkPeople() {
+  if ((peopleInput.value <= 0)) {
+    document.querySelector('.calculator__input-error').classList.add('calculator__input-error_active')
+    tipTotal.textContent = '₪0.00'
+    tipAmount.textContent = '₪0.00'
+  } else {
+    document.querySelector('.calculator__input-error').classList.remove('calculator__input-error_active')
+  }
 }
 
 buttonFive.addEventListener('click', tipFivePercent)
@@ -77,5 +89,6 @@ buttonFifthteen.addEventListener('click', tipFifthteenPercent)
 buttonTwentyfive.addEventListener('click', tipTwentyfivePercent)
 buttonFifthty.addEventListener('click', tipFifthtyPercent)
 resetButton.addEventListener('click', resetTips)
+peopleInput.addEventListener('input', checkPeople)
 inputCustom.addEventListener('input', tipCustomPercent)
 

@@ -1,6 +1,8 @@
 @import url(../vendor/normalize.css);
 @import url(../blocks/page/page.css);
 @import url(../blocks/header/__title/header__title.css);
+
+/* CALCULATOR */
 @import url(../blocks/calculator/calculator.css);
 @import url(../blocks/calculator/__options/calculator__options.css);
 @import url(../blocks/calculator/__button-reset/calculator__button-reset.css);
@@ -20,6 +22,12 @@
 @import url(../blocks/calculator/__field-name/calculator__field-name.css);
 @import url(../blocks/calculator/__input-error/_active/calculator__input-error_active.css);
 
+/* FOOTER */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyrigth/footer__copyright.css);
+
+
+/* FONT */
 @font-face {
   font-family: SpaceMonoRegular;
   src: url(../vendor/fonts/SpaceMono-Regular.ttf);
