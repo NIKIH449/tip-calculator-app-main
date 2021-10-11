@@ -15,6 +15,10 @@
 @import url(../blocks/calculator/__tips/calculator__tips.css);
 @import url(../blocks/calculator/__tip/calculator__tip.css);
 @import url(../blocks/calculator/__title/calculator__title.css);
+@import url(../blocks/calculator/__input/calculator__input_type_custom.css);
+@import url(../blocks/calculator/__input-error/calculator__input-error.css);
+@import url(../blocks/calculator/__field-name/calculator__field-name.css);
+@import url(../blocks/calculator/__input-error/_active/calculator__input-error_active.css);
 
 @font-face {
   font-family: SpaceMonoRegular;

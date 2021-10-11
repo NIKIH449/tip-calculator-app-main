@@ -1,0 +1,10 @@
+.calculator__input_type_custom {
+  margin: 0;
+  width: 100px;
+  padding: 0;
+}
+
+.calculator__input_type_custom:focus {
+  outline: none;
+  background-color: white;
+}

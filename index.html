@@ -19,39 +19,43 @@
         <div class="calculator__options">
           <div class="calculator__field">
             <p class="calculator__title">Bill</p>
-            <input type="text" class="calculator__input">
+            <input type="text" class="calculator__input calculator__input_type_bill" maxlength="4" name="bill"  value="0">
           </div>
-            <div class="calculator__field">
-              <p class="calculator__title">Select Tip %</p>
-              <div class="calculator__tips">
-                <button class="calculator__tip">5%</button>
-                <button class="calculator__tip">10%</button>
-                <button class="calculator__tip">15%</button>
-                <button class="calculator__tip">25%</button>
-                <button class="calculator__tip">50%</button>
-                <button class="calculator__tip">Custom</button>
-              </div>
+          <div class="calculator__field">
+            <p class="calculator__title">Select Tip %</p>
+            <div class="calculator__tips">
+              <button class="calculator__tip calculator__tip_type_five">5%</button>
+              <button class="calculator__tip calculator__tip_type_ten">10%</button>
+              <button class="calculator__tip calculator__tip_type_fifthteen">15%</button>
+              <button class="calculator__tip calculator__tip_type_twentyfive">25%</button>
+              <button class="calculator__tip calculator__tip_type_fifthty">50%</button>
+              <button class="calculator__tip calculator__tip_type_custom"><input type="text" maxlength="3" value="Custom" class="calculator__input calculator__input_type_custom"></button>
             </div>
-            <div class="calculator__field">
+          </div>
+          <div class="calculator__field">
+            <div class="calculator__field-name">
               <p class="calculator__title">Number of People</p>
-              <input type="text" class="calculator__input">
+              <span  class="calculator__input-error">Can't be 0</span>
             </div>
+            <input type="text" class="calculator__input calculator__input_type_people" name="people" value="1">
+          </div>
         </div>
         <div class="calculator__result">
           <div class="calculator__result-field">
             <div class="calculator__calculated">
               <h2 class="calculator__calculated-title">Tip Amount<span class="calculator__calculated-span"> /person</span></h2>
-              <h2 class="calculator__calculated-sum">$0.00</h2>
+              <h2 class="calculator__calculated-sum calculator__calculated-sum_type_amount">₪0.00</h2>
             </div>
             <div class="calculator__calculated">
               <h2 class="calculator__calculated-title">Total<span class="calculator__calculated-span"> /person</span></h2>
-              <h2 class="calculator__calculated-sum">$0.00</h2>
+              <h2 class="calculator__calculated-sum calculator__calculated-sum_type_total">₪0.00</h2>
             </div>
           </div>
-          <button class="calculator__button-reset">RESET</button>
+          <button class="calculator__button-reset" disabled>RESET</button>
         </div>
       </div>
     </main>
   </div>
+  <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
