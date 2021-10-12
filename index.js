@@ -11,54 +11,56 @@ const buttonTwentyfive = page.querySelector('.calculator__tip_type_twentyfive')
 const buttonFifthty = page.querySelector('.calculator__tip_type_fifthty')
 const buttonCustom = page.querySelector('.calculator__tip_type_custom')
 const inputCustom = page.querySelector('.calculator__input_type_custom')
+const inputError = page.querySelector('.calculator__input-error')
 
 function disableButton() {
   resetButton.removeAttribute('disabled')
 }
+
 function tipFivePercent() {
   if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*5).toFixed(2)
-  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*5).toFixed(2)
+  tipTotal.textContent = '₪'+ (billInput.value/100*5).toFixed(2)
+  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*5).toFixed(2)
   disableButton()
   }
 }
 
 function tipTenPercent() {
   if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*10).toFixed(2)
-  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*10).toFixed(2)
+  tipTotal.textContent = '₪'+ (billInput.value/100*10).toFixed(2)
+  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*10).toFixed(2)
   disableButton()
   }
 }
 
 function tipFifthteenPercent() {
   if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*15).toFixed(2)
-  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*15).toFixed(2)
+  tipTotal.textContent = '₪'+ (billInput.value/100*15).toFixed(2)
+  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*15).toFixed(2)
   disableButton()
   }
 }
 
 function tipTwentyfivePercent() {
   if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*25).toFixed(2)
-  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*25).toFixed(2)
+  tipTotal.textContent = '₪'+ (billInput.value/100*25).toFixed(2)
+  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*25).toFixed(2)
   disableButton()
   }
 }
 
 function tipFifthtyPercent() {
   if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*50).toFixed(2)
-  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*50).toFixed(2)
+  tipTotal.textContent = '₪'+ (billInput.value/100*50).toFixed(2)
+  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*50).toFixed(2)
   disableButton()
   }
 }
 
 function tipCustomPercent() {
   if (inputCustom.value >= 0 && billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ Math.abs(billInput.value/100*inputCustom.value).toFixed(2)
-  tipAmount.textContent = '₪'+ Math.abs(billInput.value/peopleInput.value/100*inputCustom.value).toFixed(2)
+  tipTotal.textContent = '₪'+ (billInput.value/100*inputCustom.value).toFixed(2)
+  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*inputCustom.value).toFixed(2)
   disableButton()
   }
 }
@@ -72,14 +74,13 @@ function resetTips() {
   resetButton.setAttribute('disabled', true)
 }
 
-
 function checkPeople() {
   if ((peopleInput.value <= 0)) {
-    document.querySelector('.calculator__input-error').classList.add('calculator__input-error_active')
+    inputError.classList.add('calculator__input-error_active')
     tipTotal.textContent = '₪0.00'
     tipAmount.textContent = '₪0.00'
   } else {
-    document.querySelector('.calculator__input-error').classList.remove('calculator__input-error_active')
+    inputError.classList.remove('calculator__input-error_active')
   }
 }
 
