@@ -17,51 +17,18 @@ function disableButton() {
   resetButton.removeAttribute('disabled')
 }
 
-function tipFivePercent() {
+function calculateTips(percent) {
   if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*5).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*5).toFixed(2)
-  disableButton()
+    tipTotal.textContent = '₪'+ (billInput.value/100*percent).toFixed(2)
+    tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*percent).toFixed(2)
+    disableButton()
   }
 }
 
-function tipTenPercent() {
-  if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*10).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*10).toFixed(2)
-  disableButton()
-  }
-}
-
-function tipFifthteenPercent() {
-  if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*15).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*15).toFixed(2)
-  disableButton()
-  }
-}
-
-function tipTwentyfivePercent() {
-  if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*25).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*25).toFixed(2)
-  disableButton()
-  }
-}
-
-function tipFifthtyPercent() {
-  if (billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*50).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*50).toFixed(2)
-  disableButton()
-  }
-}
-
-function tipCustomPercent() {
+function calculateCustomPercent() {
   if (inputCustom.value >= 0 && billInput.value >= 1 && peopleInput.value >= 1) {
-  tipTotal.textContent = '₪'+ (billInput.value/100*inputCustom.value).toFixed(2)
-  tipAmount.textContent = '₪'+ (billInput.value/peopleInput.value/100*inputCustom.value).toFixed(2)
-  disableButton()
+    calculateTips(inputCustom.value)
+    disableButton()
   }
 }
 
@@ -84,12 +51,21 @@ function checkPeople() {
   }
 }
 
-buttonFive.addEventListener('click', tipFivePercent)
-buttonTen.addEventListener('click', tipTenPercent)
-buttonFifthteen.addEventListener('click', tipFifthteenPercent)
-buttonTwentyfive.addEventListener('click', tipTwentyfivePercent)
-buttonFifthty.addEventListener('click', tipFifthtyPercent)
+buttonFive.addEventListener('click', () => {
+  calculateTips(5)
+})
+buttonTen.addEventListener('click', () => {
+  calculateTips(10)
+})
+buttonFifthteen.addEventListener('click', () => {
+  calculateTips(15)
+})
+buttonTwentyfive.addEventListener('click', () => {
+  calculateTips(25)
+})
+buttonFifthty.addEventListener('click', () => {
+  calculateTips(50)
+})
+inputCustom.addEventListener('input', calculateCustomPercent)
 resetButton.addEventListener('click', resetTips)
 peopleInput.addEventListener('input', checkPeople)
-inputCustom.addEventListener('input', tipCustomPercent)
-
